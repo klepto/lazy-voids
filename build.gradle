@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+}
+
+group 'dev.klepto.lazyvoids'
+
+def deps = [
+        streamex : 'one.util:streamex:0.7.2',
+        guava : 'com.google.guava:guava:28.2-jre',
+        typetools : 'net.jodah:typetools:0.6.2',
+        lombok: 'org.projectlombok:lombok:1.18.12'
+]
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api deps.streamex
+    implementation deps.guava
+    implementation deps.typetools
+    implementation deps.lombok
+    annotationProcessor deps.lombok
+}
